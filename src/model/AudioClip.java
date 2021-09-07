@@ -15,8 +15,12 @@ public class AudioClip {
 	
 	private Clip clip;
 	private Thread thread;
+	private String title;
 
+	//Connecting Clip to a Specific file
+	
 	public AudioClip(File audioFile) {	
+		title = audioFile.getName();
 		AudioInputStream ais = null;
 		try {
 			ais = AudioSystem.getAudioInputStream(audioFile);
@@ -47,6 +51,8 @@ public class AudioClip {
         }
 	}
 	
+	//Playing clip
+	
 	public void start()
     {
         Runnable r = new Runnable() {
@@ -59,5 +65,17 @@ public class AudioClip {
         thread = new Thread(r);
         thread.start();
     }
+	
+	// Getters
+	
+	public String getTitle() {
+		if(title.equals(""))
+		{
+			return "UNTITLED";
+		}
+		return title;
+	}
+	
+	// TO BE IMPLEMENTED - EQ, Gain, and Volume settings
 	
 }

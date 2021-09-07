@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="500.0" minWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AudioListController">
+   	<fx:define>
+   		
+	</fx:define>
+   
+   <children>
+      <ButtonBar layoutX="24.0" layoutY="436.0" prefHeight="100.0" prefWidth="750.0">
+        <buttons>
+            <Button id="new-cue-button" mnemonicParsing="false" onAction="#addCueButtonPressed" prefHeight="50.0" prefWidth="50.0" ButtonBar.buttonData="LEFT">
+               <graphic>
+                  <ImageView fx:id="newCueImageView" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic></Button>
+          	<Button id="delete-cue-button" mnemonicParsing="false" onAction="#deleteCueButtonPressed" prefHeight="50.0" prefWidth="50.0" ButtonBar.buttonData="LEFT">
+               <graphic>
+                  <ImageView fx:id="deleteCueImageView" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic></Button>
+               <Button id="next-cue-button" mnemonicParsing="false" onAction="#prevCueButtonPressed" ButtonBar.buttonData="LEFT">
+               <graphic>
+                  <ImageView fx:id="prevCueImageView" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic></Button>
+            <Button id="prev-cue-button" mnemonicParsing="false" onAction="#nextCueButtonPressed" ButtonBar.buttonData="LEFT">
+               <graphic>
+                  <ImageView fx:id="nextCueImageView" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic></Button>
+               <Button id="play_button" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#playButtonPressed" prefHeight="75.0" prefWidth="75.0" ButtonBar.buttonData="BIG_GAP">
+               <graphic>
+                  <ImageView fx:id="playImageView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" translateX="3.0">
+                     
+                  </ImageView>
+               </graphic></Button>
+        </buttons>
+      </ButtonBar>
+      <ScrollPane layoutX="37.0" layoutY="36.0" prefHeight="400.0" prefWidth="725.0">
+         <content>
+            <ListView fx:id="audioCueList" prefHeight="400.0" prefWidth="710.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

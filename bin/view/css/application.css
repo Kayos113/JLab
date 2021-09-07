@@ -1,0 +1,54 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+/*
+ * Color 1: #E7E0C9  Off-White
+ * Color 2: #C1CFC0  Green-Blue
+ * Color 3: #6B7AA1  Med. Blue
+ * Color 4: #11324D  Dark Blue
+ */
+ 
+ /* Icon Attribution: <div>Icons made by <a href="https://www.flaticon.com/authors/hirschwolf" title="hirschwolf">hirschwolf</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> */
+ 
+ .root {
+ 	
+ 	-fx-color: #E7E0C9;
+ 	-fx-background-color: #6B7AA1;
+ }
+ 
+ .list-view {
+ 	-fx-background-color: #11324D;
+ }
+ 
+ .list-cell {
+ 	-fx-background-color: #11324D;
+ }
+ 
+ .list-cell:filled {
+ 	-fx-background-color: #C1CFC0;
+ }
+ 
+ .list-cell:selected:focused {
+ 	-fx-background-color: #6B7AA1;
+ }
+ 
+ .button:hover {
+ 	/*-fx-opacity: 60%;*/
+ 	-fx-effect: dropshadow(gaussian,#000,10,0,0,0);
+ }
+ 
+ .button:clicked {
+ 	-fx-effect: dropshadow(gaussian,#000,0,0,0,0), innershadow(gaussian,#000,10,0.1,0,0);
+ }
+ 
+ #new-cue-button, #delete-cue-button, #next-cue-button, #prev-cue-button {
+ 	-fx-background-color:transparent;
+ 
+ }
+ #new-cue-button.image, #delete-cue-button .image, #next-cue-button .image, #prev-cue-button .image {
+ 	-fx-background-color: #E7E0C9;
+ }
+ 
+ #play_button {
+ 	-fx-background-color: #9FE6A0;
+ 	-fx-background-radius: 50%;
+ }
